@@ -1,0 +1,237 @@
+/* ===== 1. TIPOGRAFÍAS (Google Fonts con @import) =====
+   Bodoni Moda = fuente variable (pesos 400 a 900, normal e itálica) -> títulos
+   DM Mono = fuente estática (pesos 400 y 500) -> textos, navegación y etiquetas */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=DM+Mono:wght@400;500&display=swap');
+
+/* ===== 2. VARIABLES CSS (custom properties) ===== */
+:root {
+  --negro: #111111;
+  --hueso: #F2F0EB;
+  --gris: #A7A7A7;
+  --rojo: #E63229; /* solo para pequeños acentos */
+  --fuente-titulos: "Bodoni Moda", serif;
+  --fuente-texto: "DM Mono", monospace;
+}
+
+/* ===== 3. BASE ===== */
+body {
+  background-color: var(--hueso);
+  color: var(--negro);
+  font-family: var(--fuente-texto);
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.modal-title {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a {
+  color: var(--negro);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--rojo);
+}
+
+/* ===== 4. NAVBAR (se sobrescriben clases de Bootstrap) ===== */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.logo-sub {
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.navbar-brand {
+  color: var(--negro);
+}
+
+.nav-link {
+  color: var(--negro);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--rojo);
+}
+
+/* ===== 5. BOTONES (se sobrescribe .btn de Bootstrap) ===== */
+.btn {
+  border-radius: 0;
+  font-family: var(--fuente-texto);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn-alter {
+  background-color: var(--negro);
+  color: var(--hueso);
+  border: 1px solid var(--negro);
+  font-size: 0.8rem;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+}
+
+.btn-alter:hover {
+  background-color: var(--rojo);
+  border-color: var(--rojo);
+  color: var(--hueso);
+}
+
+/* ===== 6. HERO ===== */
+.kicker {
+  color: var(--rojo);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.titulo-hero {
+  font-size: clamp(3.5rem, 9vw, 8rem);
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.linea-roja {
+  width: 4rem;
+  height: 3px;
+  background-color: var(--rojo);
+}
+
+.lead {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.intro {
+  font-size: 0.95rem;
+}
+
+.foto-hero {
+  width: 100%;
+  height: 36rem;
+}
+
+/* ===== 7. ETIQUETAS Y EPÍGRAFES ===== */
+.etiqueta,
+.epigrafe {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.etiqueta {
+  font-weight: 500;
+}
+
+.detalle {
+  font-size: 0.85rem;
+}
+
+/* ===== 8. TÍTULOS DE SECCIÓN ===== */
+.titulo-seccion {
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+}
+
+/* ===== 9. COLECCIONES (tarjetas creadas con JS) ===== */
+.coleccion {
+  background-color: var(--hueso);
+}
+
+.coleccion img {
+  width: 100%;
+  height: 24rem;
+  transition: opacity 0.4s ease;
+}
+
+.coleccion:hover img {
+  opacity: 0.7;
+}
+
+.coleccion-nombre {
+  font-size: 1.6rem;
+  transition: color 0.3s ease;
+}
+
+.coleccion:hover .coleccion-nombre {
+  color: var(--rojo);
+}
+
+/* ===== 10. DISEÑADORES ===== */
+.nombre-disenador {
+  font-size: 1.7rem;
+  transition: color 0.3s ease;
+}
+
+.disenador:hover .nombre-disenador {
+  color: var(--rojo);
+}
+
+/* ===== 11. SECCIONES OSCURAS (About y Footer) ===== */
+.seccion-oscura {
+  background-color: var(--negro);
+  color: var(--hueso);
+}
+
+.seccion-oscura a {
+  color: var(--hueso);
+}
+
+.seccion-oscura a:hover {
+  color: var(--rojo);
+}
+
+.seccion-oscura .etiqueta,
+.seccion-oscura .epigrafe {
+  color: var(--gris);
+}
+
+.texto-about {
+  font-size: 1rem;
+}
+
+/* ===== 12. MODAL Y FORMULARIO (se sobrescriben clases de Bootstrap) ===== */
+.modal-content {
+  background-color: var(--hueso);
+  border: 1px solid var(--negro);
+  border-radius: 0;
+}
+
+.modal-header {
+  border-color: var(--negro);
+}
+
+.form-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.form-control {
+  background-color: var(--hueso);
+  border: 1px solid var(--negro);
+  border-radius: 0;
+  font-family: var(--fuente-texto);
+}
+
+.form-control:focus {
+  background-color: var(--hueso);
+  border-color: var(--rojo);
+  box-shadow: 0 0 6px 1px var(--rojo);
+}

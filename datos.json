@@ -1,0 +1,26 @@
+[
+  {
+    "numero": "01",
+    "nombre": "RECONSTRUIDO",
+    "disenador": "Studio NØR",
+    "categoria": "Sastrería experimental",
+    "imagen": "img/reconstructed.jpg",
+    "alt": "Maniquí sin rostro con una chaqueta gris de mangas esculpidas con volados"
+  },
+  {
+    "numero": "02",
+    "nombre": "SEGUNDA PIEL",
+    "disenador": "Atelier Forma",
+    "categoria": "Moda conceptual",
+    "imagen": "img/second-skin.jpg",
+    "alt": "Modelo con un vestido corto negro de plumas, medias estampadas y botas negras sobre fondo blanco"
+  },
+  {
+    "numero": "03",
+    "nombre": "RELIQUIAS FUTURAS",
+    "disenador": "Maison Void",
+    "categoria": "Diseño de vanguardia",
+    "imagen": "img/future-relics.jpg",
+    "alt": "Figura cubierta por una prenda azul con volados y un velo, de pie bajo una luz tenue"
+  }
+]

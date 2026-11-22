@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ALTER — Archivo de moda</title>
+
+    <!-- Link de Bootstrap 5 (CSS) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Link de Bootstrap 5 (JS, incluye popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ===== 01. NAVBAR ===== -->
+    <nav id="inicio" class="navbar navbar-expand-lg border-bottom">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center" href="#inicio">
+          <span class="logo me-2">ALTER</span>
+          <span class="logo-sub">ARCHIVO</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">INICIO</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#colecciones">COLECCIONES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#disenadores">DISEÑADORES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#nosotros">NOSOTROS</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <button
+                class="btn btn-alter"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#modalUnirse"
+              >
+                UNIRSE
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== 02. HERO ===== -->
+    <header class="container-fluid px-4 py-5">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-7 mb-4">
+          <p class="kicker">MÁS ALLÁ DE LO ORDINARIO.</p>
+
+          <h1 class="titulo-hero">
+            ALTER
+            <span class="d-block fst-italic">ARCHIVO</span>
+            <span class="d-block">DE MODA</span>
+          </h1>
+
+          <div class="linea-roja my-4"></div>
+
+          <p class="lead">Una exploración de la moda más allá de la convención.</p>
+
+          <p class="intro">
+            Un archivo independiente de moda experimental, diseñadores
+            emergentes y perspectivas poco convencionales. Explorando la moda
+            más allá de las tendencias, las temporadas y las convenciones.
+          </p>
+
+          <a class="btn btn-alter mt-3" href="#colecciones">EXPLORAR EL ARCHIVO</a>
+        </div>
+
+        <div class="col-12 col-lg-5">
+          <img
+            src="img/hero.jpg"
+            class="foto-hero img-fluid object-fit-cover"
+            alt="Fotografía en blanco y negro de una figura con traje blanco, desenfocada por el movimiento, sobre fondo negro"
+          />
+          <p class="epigrafe mt-2">FIG. 001 — Estudio de movimiento, sastrería blanca</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ===== 03. COLECCIONES DESTACADAS (se cargan desde datos.json) ===== -->
+      <section id="colecciones" class="container-fluid px-4 py-5 border-top">
+        <div class="row mb-5">
+          <div class="col-12">
+            <h2 class="titulo-seccion">OBRAS SELECCIONADAS / 001</h2>
+          </div>
+        </div>
+
+        <div id="lista-colecciones" class="row row-cols-1 row-cols-sm-2 row-cols-md-3"></div>
+      </section>
+
+      <!-- ===== 04. DISEÑADORES ===== -->
+      <section id="disenadores" class="container-fluid px-4 py-5 border-top">
+        <div class="row">
+          <div class="col-12 col-lg-5 mb-4">
+            <p class="etiqueta">DISEÑADORES / 002</p>
+            <h2 class="titulo-seccion">LA NUEVA GENERACIÓN.</h2>
+          </div>
+
+          <div class="col-12 col-lg-7">
+            <div class="disenador row border-bottom border-secondary py-4 mx-0">
+              <div class="col-12 col-md-5">
+                <h3 class="nombre-disenador">STUDIO NØR</h3>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="detalle">
+                  Desarma la sastrería clásica y la reconstruye a partir de
+                  prendas descartadas.
+                </p>
+              </div>
+              <div class="col-12 col-md-2">
+                <p class="etiqueta">Copenhague</p>
+              </div>
+            </div>
+
+            <div class="disenador row border-bottom border-secondary py-4 mx-0">
+              <div class="col-12 col-md-5">
+                <h3 class="nombre-disenador">ATELIER FORMA</h3>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="detalle">
+                  Trata el cuerpo como una superficie: capas translúcidas y
+                  costuras llevadas hacia afuera.
+                </p>
+              </div>
+              <div class="col-12 col-md-2">
+                <p class="etiqueta">París</p>
+              </div>
+            </div>
+
+            <div class="disenador row border-bottom border-secondary py-4 mx-0">
+              <div class="col-12 col-md-5">
+                <h3 class="nombre-disenador">MAISON VOID</h3>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="detalle">
+                  Diseña siluetas esculpidas que parecen reliquias de un futuro
+                  imaginado.
+                </p>
+              </div>
+              <div class="col-12 col-md-2">
+                <p class="etiqueta">Berlín</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 05. SOBRE EL ARCHIVO ===== -->
+      <section id="nosotros" class="seccion-oscura container-fluid px-4 py-5">
+        <div class="row">
+          <div class="col-12 col-md-6 mb-4">
+            <img
+              src="img/about.jpg"
+              class="img-fluid w-100"
+              alt="Fotografía en blanco y negro de una figura con velo de encaje junto a un espejo de cuerpo entero"
+            />
+            <p class="epigrafe mt-2">FIG. 002 — Reflejos, velo y encaje</p>
+          </div>
+
+          <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+            <p class="etiqueta">SOBRE EL ARCHIVO</p>
+            <h2 class="titulo-seccion">
+              NO SOLO MODA.
+              <span class="d-block fst-italic">UNA MIRADA DIFERENTE.</span>
+            </h2>
+            <div class="linea-roja my-4"></div>
+            <p class="texto-about">
+              ALTER es una plataforma independiente dedicada a documentar voces
+              emergentes y enfoques experimentales de la moda. Creemos que la
+              ropa es más que un objeto: es un medio de identidad, cultura y
+              expresión creativa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 06. UNIRSE AL ARCHIVO ===== -->
+      <section id="unirse" class="container-fluid px-4 py-5 text-center">
+        <p class="etiqueta">UNIRSE AL ARCHIVO</p>
+        <h2 class="titulo-seccion">SÉ PARTE DEL ARCHIVO.</h2>
+        <p class="intro mt-3 mb-4">
+          Dejá tu nombre y tu correo para seguir las nuevas colecciones y a los
+          nuevos diseñadores.
+        </p>
+        <button
+          class="btn btn-alter"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#modalUnirse"
+        >
+          UNIRSE AL ARCHIVO
+        </button>
+      </section>
+    </main>
+
+    <!-- ===== MODAL con formulario ===== -->
+    <div class="modal fade" id="modalUnirse" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">UNIRSE AL ARCHIVO</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="formulario-unirse" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre completo"
+                  required
+                />
+                <div class="invalid-feedback">Ingresá tu nombre completo.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="nombre@correo.com"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Ingresá un correo electrónico válido.
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  rows="4"
+                  placeholder="¿Qué te gustaría ver en el archivo?"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">Escribí un mensaje breve.</div>
+              </div>
+
+              <button type="submit" class="btn btn-alter">ENVIAR</button>
+            </form>
+
+            <div id="mensaje-gracias" class="d-none">
+              <h5 class="modal-title">GRACIAS.</h5>
+              <p class="detalle mt-2">
+                Recibimos tu mensaje. Te damos la bienvenida al archivo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== 07. FOOTER ===== -->
+    <footer class="seccion-oscura container-fluid px-4 py-5">
+      <div class="row">
+        <div class="col-12 col-md-6 mb-4">
+          <p class="logo">ALTER — ARCHIVO DE MODA</p>
+          <p class="detalle">Perspectivas independientes sobre la moda contemporánea.</p>
+        </div>
+
+        <div class="col-12 col-md-6 d-flex flex-column">
+          <a class="mb-2" href="https://www.instagram.com/" target="_blank">Instagram</a>
+          <a class="mb-2" href="#unirse">Contacto</a>
+          <a href="#inicio">Volver arriba</a>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary mt-4 pt-4">
+        <p class="etiqueta">Copyright 2026 ALTER — ARCHIVO DE MODA.</p>
+        <p class="etiqueta">
+          Fotografías vía Unsplash: ling hua, Sou Jest, ola szkolda, Allan Ferreira.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS propio -->
+    <script src="script.js"></script>
+  </body>
+</html>
